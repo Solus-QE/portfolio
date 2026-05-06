@@ -3,512 +3,350 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alexander Jameson — AI Researcher & Developer</title>
-  <meta name="description" content="Portfolio of Alexander Jameson — AI researcher, developer, and student pilot. Specializing in machine learning, mechanistic interpretability, and adversarial reasoning.">
-  <meta property="og:title" content="Alexander Jameson — AI Researcher & Developer">
-  <meta property="og:description" content="AI researcher and developer specializing in mechanistic interpretability and adversarial reasoning.">
+  <title>AJ | Alexander Jameson — Portfolio</title>
+  <meta name="description" content="Portfolio of Alexander Jameson — AI researcher, developer, and student pilot specializing in mechanistic interpretability and adversarial reasoning.">
+  <meta property="og:title" content="AJ | Alexander Jameson — Portfolio">
+  <meta property="og:description" content="AI researcher and developer. Mechanistic interpretability, adversarial reasoning, and open-source evaluation.">
   <meta property="og:type" content="website">
-
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:wght@400;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/reset.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/typography.css">
   <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/typography.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
-  <!-- Loading Screen -->
-  <div class="loading-screen" id="loadingScreen">
-    <div class="loading-text">AJ</div>
+
+<!-- ═══ PRELOADER ═══ -->
+<div class="preloader" id="preloader">
+  <div class="preloader-logo">
+    <div class="preloader-logo-layer cyan">
+      <span></span><span></span><span></span>
+      <span></span><span></span><span></span>
+    </div>
+    <div class="preloader-logo-layer magenta">
+      <span></span><span></span><span></span>
+      <span></span><span></span><span></span>
+    </div>
+    <div class="preloader-logo-layer white">
+      <span></span><span></span><span></span>
+      <span></span><span></span><span></span>
+    </div>
   </div>
+</div>
 
-  <!-- Grain Overlay -->
-  <div class="grain-overlay"></div>
+<!-- ═══ GRAIN ═══ -->
+<div class="grain"></div>
 
-  <div class="app" id="app">
+<div class="app" id="app">
 
-    <!-- ═══ Navigation Bar ═══ -->
-    <nav class="nav-bar" id="navBar">
-      <div class="nav-logo" id="navLogo" title="Alexander Jameson">
-        <div class="nav-logo-grid">
-          <div class="nav-logo-block"></div>
-          <div class="nav-logo-block"></div>
-          <div class="nav-logo-block"></div>
-          <div class="nav-logo-block"></div>
-          <div class="nav-logo-block"></div>
-          <div class="nav-logo-block"></div>
-          <div class="nav-logo-block"></div>
-          <div class="nav-logo-block"></div>
-          <div class="nav-logo-block"></div>
-        </div>
+  <!-- ═══ NAV ═══ -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo" id="navLogo" title="AJ">
+      <span></span><span></span><span></span>
+      <span></span><span></span><span></span>
+    </div>
+    <div class="nav-links">
+      <span class="nav-link active" data-nav="about" id="navAbout">About</span>
+      <span class="nav-link" data-nav="projects" id="navProjects">Projects</span>
+      <span class="nav-link" data-nav="experience" id="navExperience">Experience</span>
+      <span class="nav-link" data-nav="contact" id="navContact">Contacts</span>
+      <span class="nav-menu-btn" id="menuBtn">Menu</span>
+    </div>
+  </nav>
+
+  <!-- ═══ LEFT SIDEBAR ═══ -->
+  <aside class="sidebar" id="sidebar"></aside>
+
+  <!-- ═══ RIGHT SIDEBAR — SPIRAL ═══ -->
+  <aside class="spiral" id="spiral"></aside>
+
+  <!-- ═══ STAGE (windows) ═══ -->
+  <main class="stage" id="stage">
+
+    <!-- ── ABOUT ── -->
+    <section class="win" id="winAbout" data-win="about" data-state="active" style="z-index:21">
+      <div class="win-bar">
+        <div class="win-bar-dots"><div class="win-bar-dot"></div><div class="win-bar-dot"></div></div>
+        <span class="win-bar-title">About</span>
+        <span class="win-bar-info">Alexander Jameson</span>
+        <span class="win-bar-year">&copy;2026</span>
       </div>
-      <div class="nav-links">
-        <span class="nav-link active" data-section="about" id="navAbout">About</span>
-        <span class="nav-link" data-section="projects" id="navProjects">Projects</span>
-        <span class="nav-link" data-section="experience" id="navExperience">Experience</span>
-        <span class="nav-link" data-section="contact" id="navContact">Contact</span>
-        <span class="nav-menu-btn" id="navMenuBtn">Menu</span>
-      </div>
-    </nav>
-
-    <!-- ═══ Left Sidebar — Thumbnails ═══ -->
-    <aside class="sidebar-left" id="sidebarLeft">
-      <!-- Thumbnails generated by JS -->
-    </aside>
-
-    <!-- ═══ Right Sidebar — Spiral Dots ═══ -->
-    <aside class="sidebar-right" id="sidebarRight">
-      <!-- Dots generated by JS -->
-    </aside>
-
-    <!-- ═══ Windows Container ═══ -->
-    <main class="windows-container" id="windowsContainer">
-
-      <!-- ── About Window ── -->
-      <div class="window visible" id="windowAbout" data-window="about">
-        <div class="window-titlebar">
-          <div class="window-titlebar-left">
-            <div class="window-dot"></div>
-            <div class="window-dot"></div>
-            <span class="window-title">About</span>
+      <div class="win-body">
+        <!-- Top split -->
+        <div class="about-split">
+          <div class="about-main">
+            <div class="about-tagline">Alexander Jameson's Portfolio — a personal selection of projects that show research and code in ways the screen never could. These projects inspire, educate, and support the builders who dedicate themselves to advancing AI.</div>
           </div>
-          <span class="window-titlebar-center">Alexander Jameson</span>
-          <div class="window-titlebar-right">
-            <span>&copy;2026</span>
-          </div>
-        </div>
-        <div class="window-content">
-          <div class="content-split">
-            <div class="about-left">
-              <div class="about-tagline">
-                Alexander Jameson's Portfolio — a personal selection of projects that show research and code in ways the screen never could. These projects inspire, educate, and support the builders who dedicate themselves to advancing AI.
-              </div>
-
-              <div class="about-description">
-                <p>My work is a curated selection of AI research and engineering projects — preserving ideas far beyond the limits of the screen.</p>
-              </div>
-
-              <!-- Numbered section list -->
-              <div class="projects-list" style="margin-top: var(--space-xl);">
-                <div class="project-item animate-in" data-open="projects" style="padding-left:0">
-                  <div class="project-number">1</div>
-                  <div class="project-info">
-                    <div class="project-title">Adversarial SAE Research</div>
-                    <div class="project-meta">Lead Author, 2026</div>
-                  </div>
-                  <span class="project-tag">Research</span>
-                </div>
-                <div class="project-item animate-in" data-open="projects" style="padding-left:0">
-                  <div class="project-number">2</div>
-                  <div class="project-info">
-                    <div class="project-title">Latent Space Reasoning</div>
-                    <div class="project-meta">Co-Author, NEMI Workshop</div>
-                  </div>
-                  <span class="project-tag">Research</span>
-                </div>
-                <div class="project-item animate-in" data-open="projects" style="padding-left:0">
-                  <div class="project-number">3</div>
-                  <div class="project-info">
-                    <div class="project-title">EvalEval — Eval Cards</div>
-                    <div class="project-meta">Open Source Frontend</div>
-                  </div>
-                  <span class="project-tag">Open Source</span>
-                </div>
-                <div class="project-item animate-in" data-open="projects" style="padding-left:0">
-                  <div class="project-number">4</div>
-                  <div class="project-info">
-                    <div class="project-title">Codey</div>
-                    <div class="project-meta">AI Agent, 2026</div>
-                  </div>
-                  <span class="project-tag">AI/ML</span>
-                </div>
-                <div class="project-item animate-in" data-open="projects" style="padding-left:0">
-                  <div class="project-number">5</div>
-                  <div class="project-info">
-                    <div class="project-title">Aerodynamics Graphics</div>
-                    <div class="project-meta">C Programming, 2026</div>
-                  </div>
-                  <span class="project-tag">Engineering</span>
-                </div>
-                <div class="project-item animate-in" data-open="projects" style="padding-left:0">
-                  <div class="project-number">6</div>
-                  <div class="project-info">
-                    <div class="project-title">Aperture</div>
-                    <div class="project-meta">GDScript Game, 2025</div>
-                  </div>
-                  <span class="project-tag">Game Dev</span>
-                </div>
-                <div class="project-item animate-in" data-open="projects" style="padding-left:0">
-                  <div class="project-number">7</div>
-                  <div class="project-info">
-                    <div class="project-title">CryptoFraudDetector</div>
-                    <div class="project-meta">ML Security, 2025</div>
-                  </div>
-                  <span class="project-tag">AI/ML</span>
-                </div>
-                <div class="project-item animate-in" data-open="projects" style="padding-left:0">
-                  <div class="project-number">8</div>
-                  <div class="project-info">
-                    <div class="project-title">GaslightingAI</div>
-                    <div class="project-meta">Adversarial Research, 2025</div>
-                  </div>
-                  <span class="project-tag">Research</span>
-                </div>
+          <div class="about-right-panel">
+            <div class="about-right-top">
+              Researcher specializing in mechanistic interpretability, adversarial reasoning, and model evaluation. Currently authoring papers on sparse autoencoder architectures and contributing to open-source AI evaluation tools. Committed to advancing AI development through rigorous research and open collaboration.
+            </div>
+            <div class="halftone-wrap">
+              <canvas id="htCanvas1"></canvas>
+              <div class="halftone-blocks">
+                <div class="hb solid"></div><div class="hb"></div><div class="hb solid"></div><div class="hb solid"></div>
+                <div class="hb"></div><div class="hb solid"></div><div class="hb"></div><div class="hb"></div>
+                <div class="hb solid"></div><div class="hb"></div><div class="hb solid"></div><div class="hb solid"></div>
+                <div class="hb"></div><div class="hb solid"></div><div class="hb solid"></div><div class="hb"></div>
+                <div class="hb solid"></div><div class="hb"></div><div class="hb"></div><div class="hb solid"></div>
+                <div class="hb"></div><div class="hb solid"></div><div class="hb"></div><div class="hb"></div>
               </div>
             </div>
+          </div>
+        </div>
 
-            <div class="about-right">
+        <!-- Contact strip -->
+        <div class="contact-strip">
+          <div class="contact-strip-group">
+            <span class="contact-strip-label">Contacts:</span>
+            <span class="contact-strip-val"><a href="mailto:solus.quant.exps@gmail.com">solus.quant.exps@gmail.com</a></span>
+          </div>
+          <div class="contact-strip-group">
+            <span class="contact-strip-label">Social:</span>
+            <span class="contact-strip-val">
+              <a href="https://github.com/Solus-QE" target="_blank">GitHub</a>
+            </span>
+          </div>
+        </div>
+
+        <!-- Description text -->
+        <div class="about-desc">
+          My portfolio is a curated selection of AI research and engineering projects — preserving ideas far beyond the limits of the screen.
+        </div>
+
+        <!-- Numbered list preview -->
+        <div class="about-list stagger" id="aboutList"></div>
+
+        <!-- Bottom split: Quotes + Featured -->
+        <div class="about-split" style="min-height: auto;">
+          <div class="quotes-panel">
+            <div class="quotes-head">
+              <span class="quotes-title">Quotes:</span>
+              <span class="quotes-count">(3)</span>
+            </div>
+            <div class="quote">
+              <div class="quote-author">A. Turing:</div>
               <div>
-                <p style="font-size: var(--fs-sm); color: var(--text-medium); line-height: var(--lh-relaxed);">
-                  Researcher with extensive experience at ARCSOFT and in ML research, specializing in mechanistic interpretability, adversarial reasoning, and model evaluation. Currently authoring papers on sparse autoencoder architectures and contributing to open-source AI evaluation tools.
-                </p>
+                <div class="quote-text">"We can only see a short distance ahead, but we can see plenty there that needs to be done."</div>
+                <div class="quote-source">Computing Machinery<br>and Intelligence</div>
               </div>
-
-              <!-- Halftone Image -->
-              <div class="halftone-area" id="halftoneArea">
-                <canvas id="halftoneCanvas"></canvas>
+            </div>
+            <div class="quote">
+              <div class="quote-author">R. Feynman:</div>
+              <div>
+                <div class="quote-text">"What I cannot create, I do not understand."</div>
+                <div class="quote-source">Feynman's Blackboard</div>
+              </div>
+            </div>
+            <div class="quote">
+              <div class="quote-author">D. Knuth:</div>
+              <div>
+                <div class="quote-text">"The best programs are written so that computing machines can perform them quickly and so that human beings can understand them clearly."</div>
+                <div class="quote-source">The Art of<br>Computer Programming</div>
               </div>
             </div>
           </div>
 
-          <!-- Contact Bar -->
-          <div class="contact-bar">
-            <div class="contact-bar-group">
-              <span class="contact-bar-label">Contacts:</span>
-              <span class="contact-bar-value">
-                <a href="mailto:solus.quant.exps@gmail.com" class="link-sweep">solus.quant.exps@gmail.com</a>
-              </span>
+          <div class="featured-panel">
+            <div class="featured-head">
+              <span class="featured-title">Featured Projects</span>
+              <span class="featured-count">(8)</span>
             </div>
-            <div class="contact-bar-group">
-              <span class="contact-bar-label">Social:</span>
-              <span class="contact-bar-value">
-                <a href="https://github.com/Solus-QE" target="_blank" class="link-sweep">GitHub</a>
-              </span>
-            </div>
+            <div id="featuredList"></div>
           </div>
+        </div>
 
-          <!-- Quotes + Featured Projects -->
-          <div class="content-split">
-            <div class="quotes-card">
-              <div class="quotes-card-header">
-                <span class="quotes-card-title">Quotes:</span>
-                <span class="quotes-card-count">(3)</span>
+        <!-- Featured Authors / Skills Section -->
+        <div class="authors-section">
+          <div class="featured-head" style="padding-left:0">
+            <span class="featured-title">Featured Skills</span>
+            <span class="featured-count">(6)</span>
+          </div>
+          <div class="authors-grid" id="skillsGrid"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── PROJECTS ── -->
+    <section class="win" id="winProjects" data-win="projects" data-state="hidden" style="z-index:20">
+      <div class="win-bar">
+        <div class="win-bar-dots"><div class="win-bar-dot"></div><div class="win-bar-dot"></div></div>
+        <span class="win-bar-title">Projects</span>
+        <span class="win-bar-info">AJ Projects</span>
+        <span class="win-bar-year">&copy;2026</span>
+      </div>
+      <div class="win-body">
+        <div class="projects-head">
+          <h1 class="projects-title">Projects I've<br>Built &amp; Researched</h1>
+          <p class="projects-desc">My portfolio is a curated selection of AI research, engineering projects, and hackathon builds — preserving ideas far beyond the limits of the screen.</p>
+        </div>
+        <div id="projectsFull" class="stagger"></div>
+      </div>
+    </section>
+
+    <!-- ── EXPERIENCE ── -->
+    <section class="win" id="winExperience" data-win="experience" data-state="hidden" style="z-index:19">
+      <div class="win-bar">
+        <div class="win-bar-dots"><div class="win-bar-dot"></div><div class="win-bar-dot"></div></div>
+        <span class="win-bar-title">Experience</span>
+        <span class="win-bar-info">Alexander Jameson</span>
+        <span class="win-bar-year">&copy;2026</span>
+      </div>
+      <div class="win-body">
+        <div class="exp-bg">
+          <div class="exp-grid">
+            <div class="exp-col">
+              <div class="exp-section">
+                <div class="exp-section-title">Work Experience</div>
+                <div class="exp-item">
+                  <div class="exp-role">QA Tester</div>
+                  <div class="exp-org">ARCSOFT</div>
+                  <div class="exp-date">January 2026 — Present</div>
+                  <div class="exp-desc">Conducted software testing to identify defects, ensuring adherence to quality standards and enhancing overall product reliability. Collaborated with developers to clarify application requirements.</div>
+                </div>
+                <div class="exp-item">
+                  <div class="exp-role">Golf Cart Attendant</div>
+                  <div class="exp-org">Kemper Sports</div>
+                  <div class="exp-date">August 2025 — Present</div>
+                  <div class="exp-desc">Facilitated golf cart rentals and returns. Maintained high appearance standards through thorough cleaning and organization.</div>
+                </div>
               </div>
-
-              <div class="quote-item">
-                <div class="quote-item-author">A. Turing:</div>
-                <div class="quote-item-text">"We can only see a short distance ahead, but we can see plenty there that needs to be done."</div>
-                <div class="quote-item-source">Computing Machinery and Intelligence</div>
-              </div>
-
-              <div class="quote-item">
-                <div class="quote-item-author">R. Feynman:</div>
-                <div class="quote-item-text">"What I cannot create, I do not understand."</div>
-                <div class="quote-item-source">Feynman's Blackboard</div>
-              </div>
-
-              <div class="quote-item">
-                <div class="quote-item-author">D. Knuth:</div>
-                <div class="quote-item-text">"The best programs are written so that computing machines can perform them quickly and so that human beings can understand them clearly."</div>
-                <div class="quote-item-source">The Art of Computer Programming</div>
+              <div class="exp-section">
+                <div class="exp-section-title">Research</div>
+                <div class="exp-item">
+                  <div class="exp-role">Lead Researcher</div>
+                  <div class="exp-org">NEMI National Workshop</div>
+                  <div class="exp-date">2026</div>
+                  <div class="exp-desc">Co-authored paper on latent space reasoning. Lead authoring second paper on adversarial reasoning using sparse autoencoder (SAE) architectures.</div>
+                </div>
+                <div class="exp-item">
+                  <div class="exp-role">ACL Workshop Reviewer</div>
+                  <div class="exp-org">Association for Computational Linguistics</div>
+                  <div class="exp-date">2026</div>
+                  <div class="exp-desc">Invited peer reviewer for ML research papers submitted to the EvalEval workshop.</div>
+                </div>
+                <div class="exp-item">
+                  <div class="exp-role">Open Source Contributor</div>
+                  <div class="exp-org">EvalEval Coalition</div>
+                  <div class="exp-date">2026</div>
+                  <div class="exp-desc">Developing frontend for the Eval Cards project and contributing to ML research for upcoming technical publications.</div>
+                </div>
               </div>
             </div>
-
-            <div style="padding: 0;">
-              <div class="featured-header">
-                <span class="featured-title">Featured Projects</span>
-                <span class="featured-count">(8)</span>
+            <div class="exp-col">
+              <div class="exp-section">
+                <div class="exp-section-title">Leadership &amp; Activities</div>
+                <div class="exp-item">
+                  <div class="exp-role">Hackathon Director</div>
+                  <div class="exp-org">Planet Hacks &amp; Campfire</div>
+                  <div class="exp-date">2025 — Present</div>
+                  <div class="exp-desc">Managing logistics, venue operations, and corporate sponsorships for two student-led hackathons.</div>
+                </div>
+                <div class="exp-item">
+                  <div class="exp-role">Squad/Section Leader</div>
+                  <div class="exp-org">Marching &amp; Pep Band</div>
+                  <div class="exp-date">2023 — Present</div>
+                  <div class="exp-desc">Selected for Raiders Drum &amp; Bugle Corps. Managing trumpet section rehearsals and performance discipline. 6+ year trumpet veteran.</div>
+                </div>
+                <div class="exp-item">
+                  <div class="exp-role">Student Pilot</div>
+                  <div class="exp-org">Aviation</div>
+                  <div class="exp-date">2025 — Present</div>
+                  <div class="exp-desc">Pursuing Private Pilot Certificate (expected Summer 2026). Holding FAA Student Pilot Certificate.</div>
+                </div>
+                <div class="exp-item">
+                  <div class="exp-role">Hack Club Stardance Ambassador</div>
+                  <div class="exp-org">Hack Club</div>
+                  <div class="exp-date">2025 — Present</div>
+                </div>
               </div>
-              <div class="projects-list">
-                <div class="project-item" data-project="0">
-                  <div class="project-number" style="color: var(--accent-copper);">1</div>
-                  <div class="project-info">
-                    <div class="project-title">Adversarial SAE Research</div>
-                    <div class="project-meta">Lead Author, 2026</div>
-                  </div>
-                  <span class="project-tag">Research</span>
-                </div>
-                <div class="project-item" data-project="1">
-                  <div class="project-number" style="color: var(--accent-copper);">2</div>
-                  <div class="project-info">
-                    <div class="project-title">Latent Space Reasoning</div>
-                    <div class="project-meta">Co-Author, NEMI Workshop</div>
-                  </div>
-                  <span class="project-tag">Research</span>
-                </div>
-                <div class="project-item" data-project="2">
-                  <div class="project-number" style="color: var(--accent-copper);">3</div>
-                  <div class="project-info">
-                    <div class="project-title">EvalEval — Eval Cards</div>
-                    <div class="project-meta">EvalEval Coalition</div>
-                  </div>
-                  <span class="project-tag">Open Source</span>
-                </div>
-                <div class="project-item" data-project="3">
-                  <div class="project-number" style="color: var(--accent-copper);">4</div>
-                  <div class="project-info">
-                    <div class="project-title">Codey</div>
-                    <div class="project-meta">AI Agent, 2026</div>
-                  </div>
-                  <span class="project-tag">AI/ML</span>
-                </div>
-                <div class="project-item" data-project="4">
-                  <div class="project-number" style="color: var(--accent-copper);">5</div>
-                  <div class="project-info">
-                    <div class="project-title">Aerodynamics Graphics</div>
-                    <div class="project-meta">C Programming</div>
-                  </div>
-                  <span class="project-tag">Engineering</span>
+              <div class="exp-section">
+                <div class="exp-section-title">Hackathon Awards</div>
+                <div class="exp-item"><div class="exp-role">UofT GenAI Genesis — 2x Finalist</div><div class="exp-date">Invite-only</div></div>
+                <div class="exp-item"><div class="exp-role">Yale YQuantum</div><div class="exp-date">Invite-only</div></div>
+                <div class="exp-item"><div class="exp-role">Apex — Finalist</div><div class="exp-date">Invite-only</div></div>
+                <div class="exp-item"><div class="exp-role">SHS Hacks — 1st Place</div></div>
+                <div class="exp-item"><div class="exp-role">Scrapyard — 2nd Place</div></div>
+                <div class="exp-item"><div class="exp-role">Daydream — 2nd Place</div></div>
+              </div>
+              <div class="exp-section">
+                <div class="exp-section-title">Skills &amp; Languages</div>
+                <div class="exp-desc" style="margin-top:0">
+                  <strong>Programming:</strong> Python, Lua, Java, C, JavaScript, GDScript<br>
+                  <strong>ML:</strong> Mechanistic Interpretability, SAEs, NLP, Reinforcement Learning<br>
+                  <strong>Tools:</strong> Git, GitHub, Jupyter, PyTorch<br>
+                  <strong>Languages:</strong> English (Native), Spanish (Advanced), Bulgarian (Intermediate)
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- ── Projects Window ── -->
-      <div class="window" id="windowProjects" data-window="projects">
-        <div class="window-titlebar">
-          <div class="window-titlebar-left">
-            <div class="window-dot"></div>
-            <div class="window-dot"></div>
-            <span class="window-title">Projects</span>
-          </div>
-          <span class="window-titlebar-center">AJ Projects</span>
-          <div class="window-titlebar-right">
-            <span>&copy;2026</span>
-          </div>
-        </div>
-        <div class="window-content">
-          <div class="projects-header">
-            <h1 class="heading-2">Projects I've<br>Built &amp; Researched</h1>
-            <p class="body-base text-muted" style="margin-top: var(--space-md); max-width: 500px;">
-              My portfolio is a curated selection of AI research, engineering projects, and hackathon builds — preserving ideas far beyond the limits of the screen.
-            </p>
-          </div>
-          <div class="projects-list" id="projectsList">
-            <!-- Generated by JS -->
-          </div>
-        </div>
+    <!-- ── CONTACT ── -->
+    <section class="win" id="winContact" data-win="contact" data-state="hidden" style="z-index:18">
+      <div class="win-bar">
+        <div class="win-bar-dots"><div class="win-bar-dot"></div><div class="win-bar-dot"></div></div>
+        <span class="win-bar-title">Contacts</span>
+        <span class="win-bar-info">Alexander Jameson</span>
+        <span class="win-bar-year">&copy;2026</span>
       </div>
-
-      <!-- ── Experience Window ── -->
-      <div class="window experience-window" id="windowExperience" data-window="experience">
-        <div class="window-titlebar">
-          <div class="window-titlebar-left">
-            <div class="window-dot"></div>
-            <div class="window-dot"></div>
-            <span class="window-title">Experience</span>
+      <div class="win-body" style="display:flex; flex-direction:column;">
+        <div class="contact-top">
+          <div class="contact-group">
+            <span class="contact-label">Social</span>
+            <a href="https://github.com/Solus-QE" target="_blank" class="contact-val">GitHub</a>
           </div>
-          <span class="window-titlebar-center">Alexander Jameson</span>
-          <div class="window-titlebar-right">
-            <span>&copy;2026</span>
+          <div class="contact-group" style="align-items:flex-end;">
+            <a href="mailto:solus.quant.exps@gmail.com" class="contact-val">Contact me</a>
           </div>
         </div>
-        <div class="window-content">
-          <div class="experience-grid">
-            <div class="experience-column">
-              <div class="experience-section">
-                <div class="experience-section-title">Work Experience</div>
-
-                <div class="experience-item">
-                  <div class="experience-role">QA Tester</div>
-                  <div class="experience-company">ARCSOFT</div>
-                  <div class="experience-date">January 2026 — Present</div>
-                  <div class="experience-desc">Conducted software testing to identify defects, ensuring adherence to quality standards. Collaborated with developers to clarify requirements and address usability concerns.</div>
-                </div>
-
-                <div class="experience-item">
-                  <div class="experience-role">Golf Cart Attendant</div>
-                  <div class="experience-company">Kemper Sports</div>
-                  <div class="experience-date">August 2025 — Present</div>
-                  <div class="experience-desc">Facilitated operations for golfers. Maintained high appearance standards through thorough cleaning and organization.</div>
-                </div>
-              </div>
-
-              <div class="experience-section">
-                <div class="experience-section-title">Research</div>
-
-                <div class="experience-item">
-                  <div class="experience-role">Lead Researcher</div>
-                  <div class="experience-company">NEMI National Workshop</div>
-                  <div class="experience-date">2026</div>
-                  <div class="experience-desc">Co-authored paper on latent space reasoning. Currently lead authoring a second paper on adversarial reasoning using sparse autoencoder (SAE) architectures.</div>
-                </div>
-
-                <div class="experience-item">
-                  <div class="experience-role">ACL Workshop Reviewer</div>
-                  <div class="experience-company">Association for Computational Linguistics</div>
-                  <div class="experience-date">2026</div>
-                  <div class="experience-desc">Invited peer reviewer for ML research papers submitted to the EvalEval workshop.</div>
-                </div>
-
-                <div class="experience-item">
-                  <div class="experience-role">Open Source Contributor</div>
-                  <div class="experience-company">EvalEval Coalition</div>
-                  <div class="experience-date">2026</div>
-                  <div class="experience-desc">Developing frontend for the Eval Cards project and contributing to ML research for upcoming technical publications.</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="experience-column">
-              <div class="experience-section">
-                <div class="experience-section-title">Leadership & Activities</div>
-
-                <div class="experience-item">
-                  <div class="experience-role">Hackathon Director</div>
-                  <div class="experience-company">Planet Hacks & Campfire</div>
-                  <div class="experience-date">2025 — Present</div>
-                  <div class="experience-desc">Managing logistics, venue operations, and corporate sponsorships for two student-led hackathons.</div>
-                </div>
-
-                <div class="experience-item">
-                  <div class="experience-role">Squad/Section Leader</div>
-                  <div class="experience-company">Marching & Pep Band</div>
-                  <div class="experience-date">2023 — Present</div>
-                  <div class="experience-desc">Selected for Raiders Drum & Bugle Corps. Managing trumpet section rehearsals and performance discipline. 6+ year trumpet veteran.</div>
-                </div>
-
-                <div class="experience-item">
-                  <div class="experience-role">Student Pilot</div>
-                  <div class="experience-company">Aviation</div>
-                  <div class="experience-date">2025 — Present</div>
-                  <div class="experience-desc">Pursuing Private Pilot Certificate (expected Summer 2026). Holding FAA Student Pilot Certificate.</div>
-                </div>
-
-                <div class="experience-item">
-                  <div class="experience-role">Hack Club Stardance Ambassador</div>
-                  <div class="experience-company">Hack Club</div>
-                  <div class="experience-date">2025 — Present</div>
-                </div>
-              </div>
-
-              <div class="experience-section">
-                <div class="experience-section-title">Hackathon Awards</div>
-
-                <div class="experience-item">
-                  <div class="experience-role">UofT GenAI Genesis — 2x Finalist</div>
-                  <div class="experience-date">Invite-only</div>
-                </div>
-                <div class="experience-item">
-                  <div class="experience-role">Yale YQuantum</div>
-                  <div class="experience-date">Invite-only</div>
-                </div>
-                <div class="experience-item">
-                  <div class="experience-role">Apex — Finalist</div>
-                  <div class="experience-date">Invite-only</div>
-                </div>
-                <div class="experience-item">
-                  <div class="experience-role">SHS Hacks — 1st Place</div>
-                </div>
-                <div class="experience-item">
-                  <div class="experience-role">Scrapyard — 2nd Place</div>
-                </div>
-                <div class="experience-item">
-                  <div class="experience-role">Daydream — 2nd Place</div>
-                </div>
-              </div>
-
-              <div class="experience-section">
-                <div class="experience-section-title">Skills</div>
-                <div class="experience-desc" style="margin-top: 0;">
-                  <strong>Languages:</strong> Python, Lua, Java, C, JavaScript, GDScript<br>
-                  <strong>ML:</strong> Mechanistic Interpretability, SAEs, NLP, RL<br>
-                  <strong>Tools:</strong> Git, GitHub, Jupyter<br>
-                  <strong>Spoken:</strong> English (Native), Spanish (Advanced), Bulgarian (Intermediate)
-                </div>
-              </div>
+        <div class="contact-center">
+          <div class="contact-avail">
+            <span class="pulse-dot"></span>
+            <span>Available for research collaborations &amp; projects</span>
+          </div>
+          <div class="contact-halftone">
+            <canvas id="htCanvas2"></canvas>
+            <div class="halftone-blocks">
+              <div class="hb"></div><div class="hb solid"></div><div class="hb"></div><div class="hb solid"></div>
+              <div class="hb solid"></div><div class="hb"></div><div class="hb solid"></div><div class="hb"></div>
+              <div class="hb"></div><div class="hb solid"></div><div class="hb"></div><div class="hb solid"></div>
+              <div class="hb solid"></div><div class="hb"></div><div class="hb"></div><div class="hb"></div>
+              <div class="hb"></div><div class="hb solid"></div><div class="hb solid"></div><div class="hb"></div>
+              <div class="hb solid"></div><div class="hb"></div><div class="hb"></div><div class="hb solid"></div>
             </div>
           </div>
         </div>
+        <div class="contact-big-name">Alexander Jameson</div>
       </div>
+    </section>
 
-      <!-- ── Contact Window ── -->
-      <div class="window" id="windowContact" data-window="contact">
-        <div class="window-titlebar">
-          <div class="window-titlebar-left">
-            <div class="window-dot"></div>
-            <div class="window-dot"></div>
-            <span class="window-title">Contact</span>
-          </div>
-          <span class="window-titlebar-center">Alexander Jameson</span>
-          <div class="window-titlebar-right">
-            <span>&copy;2026</span>
-          </div>
-        </div>
-        <div class="window-content">
-          <div class="contact-content">
-            <div class="contact-links-row">
-              <div class="contact-link-group">
-                <span class="contact-link-label">Social</span>
-                <a href="https://github.com/Solus-QE" target="_blank" class="contact-link-value link-sweep">GitHub</a>
-              </div>
-              <div class="contact-link-group">
-                <a href="mailto:solus.quant.exps@gmail.com" class="contact-link-value link-sweep">Contact me</a>
-              </div>
-            </div>
+  </main>
 
-            <div class="contact-hero">
-              <div style="display: flex; align-items: center; gap: var(--space-md);">
-                <span class="status-dot"></span>
-                <span style="font-size: var(--fs-sm); color: var(--text-medium);">Available for research collaborations & projects</span>
-              </div>
-
-              <div class="halftone-area" style="max-width: 500px; aspect-ratio: 1/1;">
-                <canvas id="halftoneCanvas2"></canvas>
-              </div>
-            </div>
-
-            <div class="contact-name-large">
-              Alexander Jameson
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </main>
-
-    <!-- ═══ Bottom-Right Logo ═══ -->
-    <div class="logo-bottom-right" id="logoBottomRight" title="AJ">
-      <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-        <path d="M40 5 L65 25 L65 55 L40 75 L15 55 L15 25 Z" fill="none" stroke="currentColor" stroke-width="2"/>
-        <path d="M40 15 L55 28 L55 52 L40 65 L25 52 L25 28 Z" fill="none" stroke="currentColor" stroke-width="1.5"/>
-        <text x="40" y="48" text-anchor="middle" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="currentColor">AJ</text>
-      </svg>
-    </div>
-
-    <!-- ═══ Menu Overlay ═══ -->
-    <div class="menu-overlay" id="menuOverlay">
-      <button class="menu-close" id="menuClose">Close</button>
-      <div class="menu-items">
-        <div class="menu-item" data-section="about">
-          <div class="menu-item-number">1</div>
-          <div class="menu-item-label">About</div>
-        </div>
-        <div class="menu-item" data-section="projects">
-          <div class="menu-item-number">2</div>
-          <div class="menu-item-label">Projects</div>
-        </div>
-        <div class="menu-item" data-section="experience">
-          <div class="menu-item-number">3</div>
-          <div class="menu-item-label">Experience</div>
-        </div>
-        <div class="menu-item" data-section="contact">
-          <div class="menu-item-number">4</div>
-          <div class="menu-item-label">Contact</div>
-        </div>
-      </div>
-    </div>
+  <!-- ═══ BOTTOM-RIGHT LOGO ═══ -->
+  <div class="logo-br" id="logoBR">
+    <svg viewBox="0 0 80 80" fill="none" stroke="#e8e8e8" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
+      <path d="M40 8 L62 22 L62 52 L40 72 L18 52 L18 22 Z"/>
+      <path d="M40 18 L52 27 L52 47 L40 60 L28 47 L28 27 Z"/>
+      <path d="M40 28 L46 33 L46 43 L40 50 L34 43 L34 33 Z" fill="#e8e8e8" fill-opacity="0.15"/>
+      <text x="40" y="44" text-anchor="middle" font-family="'Playfair Display',serif" font-size="14" font-weight="700" fill="#e8e8e8" stroke="none">AJ</text>
+    </svg>
   </div>
 
-  <!-- JavaScript -->
-  <script src="js/app.js"></script>
+  <!-- ═══ MENU OVERLAY ═══ -->
+  <div class="menu" id="menu">
+    <button class="menu-close" id="menuClose">Close</button>
+    <div class="menu-grid" id="menuGrid"></div>
+  </div>
+
+</div>
+
+<script src="js/app.js"></script>
 </body>
 </html>
