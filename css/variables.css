@@ -1,0 +1,115 @@
+/* ═══════════════════════════════════════════
+   Design Tokens — Obys Library Style
+   ═══════════════════════════════════════════ */
+
+:root {
+  /* ── Colors ── */
+  --bg-black: #000000;
+  --bg-dark: #0a0a0a;
+  
+  /* Window surfaces */
+  --window-light: #d4d0cb;
+  --window-lighter: #e0ddd8;
+  --window-white: #eae7e2;
+  --window-cream: #f0ede8;
+  
+  /* Accent palette */
+  --accent-copper: #cd6633;
+  --accent-copper-light: #d97a4a;
+  --accent-salmon: #e17e66;
+  --accent-salmon-light: #e89880;
+  --accent-pink: #c4877a;
+  
+  /* Text */
+  --text-dark: #1a1a1a;
+  --text-medium: #444444;
+  --text-light: #888888;
+  --text-white: #f5f5f5;
+  --text-muted: #999999;
+  
+  /* Borders & Lines */
+  --border-dark: #333333;
+  --border-medium: #666666;
+  --border-light: #b5b0aa;
+  --border-window: #c8c4be;
+  
+  /* ── Typography ── */
+  --font-primary: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Playfair Display', 'Georgia', serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  
+  /* Font Sizes — Fluid Typography */
+  --fs-xs: clamp(0.65rem, 0.6rem + 0.25vw, 0.75rem);
+  --fs-sm: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --fs-base: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+  --fs-md: clamp(1rem, 0.9rem + 0.5vw, 1.25rem);
+  --fs-lg: clamp(1.25rem, 1rem + 1vw, 1.75rem);
+  --fs-xl: clamp(1.75rem, 1.2rem + 2vw, 2.75rem);
+  --fs-2xl: clamp(2.5rem, 1.5rem + 4vw, 4.5rem);
+  --fs-3xl: clamp(3rem, 2rem + 5vw, 6rem);
+  --fs-hero: clamp(3.5rem, 2rem + 7vw, 8rem);
+  
+  /* Font Weights */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-black: 900;
+  
+  /* Letter Spacing */
+  --ls-tight: -0.03em;
+  --ls-normal: 0;
+  --ls-wide: 0.05em;
+  --ls-wider: 0.1em;
+  --ls-widest: 0.15em;
+  
+  /* Line Heights */
+  --lh-tight: 0.9;
+  --lh-snug: 1.0;
+  --lh-normal: 1.4;
+  --lh-relaxed: 1.6;
+  
+  /* ── Spacing ── */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  --space-5xl: 8rem;
+  
+  /* ── Layout ── */
+  --sidebar-left-width: 110px;
+  --sidebar-right-width: 40px;
+  --nav-height: 60px;
+  --window-border-radius: 0px;
+  --window-title-height: 40px;
+  
+  /* ── Shadows ── */
+  --shadow-window: 0 8px 40px rgba(0, 0, 0, 0.5), 0 2px 10px rgba(0, 0, 0, 0.3);
+  --shadow-window-hover: 0 12px 50px rgba(0, 0, 0, 0.6), 0 4px 15px rgba(0, 0, 0, 0.4);
+  --shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.15);
+  
+  /* ── Transitions ── */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 200ms;
+  --duration-normal: 400ms;
+  --duration-slow: 600ms;
+  --duration-slower: 800ms;
+  
+  /* ── Z-Index Scale ── */
+  --z-base: 1;
+  --z-sidebar: 10;
+  --z-window-base: 20;
+  --z-window-active: 30;
+  --z-nav: 100;
+  --z-menu: 200;
+  --z-logo: 50;
+  --z-grain: 9999;
+}
