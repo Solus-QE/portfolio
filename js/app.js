@@ -18,7 +18,51 @@ const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);
 
 function init(){
   initCursor();buildSpiral();buildSidebar();buildBookSpines();buildRows();buildMenu();buildSkills();
-  bindNav();bindMenu();bindClicks();initReveal();drawHT('htC1',0);drawHT('htC2',1);runPreloader();
+  bindNav();bindMenu();bindClicks();initReveal();initAudio();drawHT('htC1',0);drawHT('htC2',1);runPreloader();
+}
+
+// Audio
+function initAudio(){
+  const audio=$('#bgAudio');
+  const btn=$('#soundToggle');
+  if(!audio||!btn)return;
+  audio.volume=0.3;
+  let playing=false;
+
+  function toggleSound(){
+    if(playing){
+      audio.pause();
+      playing=false;
+      btn.classList.remove('playing');
+      btn.querySelector('.sound-on').style.display='none';
+      btn.querySelector('.sound-off').style.display='block';
+    }else{
+      audio.play().then(()=>{
+        playing=true;
+        btn.classList.add('playing');
+        btn.querySelector('.sound-on').style.display='block';
+        btn.querySelector('.sound-off').style.display='none';
+      }).catch(()=>{});
+    }
+  }
+
+  btn.addEventListener('click',toggleSound);
+
+  // Auto-start on first user interaction (browser policy requires gesture)
+  function autoStart(){
+    if(!playing){
+      audio.play().then(()=>{
+        playing=true;
+        btn.classList.add('playing');
+        btn.querySelector('.sound-on').style.display='block';
+        btn.querySelector('.sound-off').style.display='none';
+      }).catch(()=>{});
+    }
+    document.removeEventListener('click',autoStart);
+    document.removeEventListener('keydown',autoStart);
+  }
+  document.addEventListener('click',autoStart,{once:false});
+  document.addEventListener('keydown',autoStart,{once:false});
 }
 
 // Cursor
