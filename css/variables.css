@@ -1,87 +1,26 @@
 :root {
-  /* ── Colors ── */
-  --bg-black: #0a0a0a;
-  --bg-deep: #050510;
-  
-  /* Window surfaces */
-  --window-gray: #8a8580;
-  --window-light: #b5b0a8;
-  --window-lighter: #c8c4bc;
-  --window-cream: #d8d4cc;
-  --window-white: #e8e4dc;
-  
-  /* Accent palette */
-  --accent-copper: #c65d3a;
-  --accent-copper-dark: #a84e30;
-  --accent-salmon: #d4826a;
-  --accent-salmon-bg: #c97860;
-  
-  /* Text */
-  --text-dark: #1a1a1a;
-  --text-medium: #444;
-  --text-light: #888;
-  --text-white: #e8e8e8;
-  --text-muted: #999;
-  
-  /* Borders */
-  --border-dark: #333;
-  --border-medium: #666;
-  --border-light: #a5a09a;
-  --border-window: #b8b4ae;
-  
-  /* ── Typography ── */
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-mono: 'JetBrains Mono', monospace;
-  
-  /* Fluid sizes */
-  --fs-2xs: clamp(0.55rem, 0.5rem + 0.2vw, 0.65rem);
-  --fs-xs: clamp(0.65rem, 0.6rem + 0.2vw, 0.75rem);
-  --fs-sm: clamp(0.75rem, 0.7rem + 0.2vw, 0.85rem);
-  --fs-base: clamp(0.85rem, 0.78rem + 0.3vw, 1rem);
-  --fs-md: clamp(1rem, 0.88rem + 0.5vw, 1.25rem);
-  --fs-lg: clamp(1.2rem, 1rem + 0.8vw, 1.6rem);
-  --fs-xl: clamp(1.6rem, 1.2rem + 1.5vw, 2.4rem);
-  --fs-2xl: clamp(2.2rem, 1.5rem + 3vw, 4rem);
-  --fs-3xl: clamp(3rem, 2rem + 4vw, 5.5rem);
-  --fs-hero: clamp(3.5rem, 2rem + 6vw, 7rem);
-  
-  /* Weights */
-  --fw-light: 300;
-  --fw-regular: 400;
-  --fw-medium: 500;
-  --fw-semibold: 600;
-  --fw-bold: 700;
-  --fw-black: 900;
-  
-  /* Tracking */
-  --ls-tight: -0.03em;
-  --ls-normal: 0;
-  --ls-wide: 0.04em;
-  --ls-wider: 0.08em;
-  
-  /* Leading */
-  --lh-tight: 0.92;
-  --lh-snug: 1.05;
-  --lh-normal: 1.4;
-  --lh-relaxed: 1.6;
-  
-  /* ── Layout ── */
-  --sidebar-w: 110px;
-  --spiral-w: 40px;
-  --nav-h: 56px;
-  --titlebar-h: 36px;
-  
-  /* ── Timing ── */
-  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-out: cubic-bezier(0.25, 1, 0.5, 1);
-  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
-  
-  /* ── Z-index ── */
-  --z-sidebar: 10;
-  --z-windows: 20;
-  --z-nav: 100;
-  --z-menu: 500;
-  --z-loader: 1000;
-  --z-grain: 9999;
+  /* Exact PX PUSH Color System */
+  --bgcolor: #1a1a1a;
+  --primarycolor: #bababa;
+  --red: #ff001a;
+  --grey: #bababa;
+  --black: #111111;
+  --lightblue: #9fe4f3;
+  --blue: #03049c;
+  --cream: #bab5a6;
+  --green: #00ff66;
+  --pink: #a7849d;
+  --lightgrey: #71737d;
+
+  /* Grid & Dimensions */
+  --columns: 20;
+  --bannerHeight: 100vh;
+  --radius: 0.5vw;
+  --border: 1px solid hsla(0, 0%, 100%, 0.7);
+  --borderFade: 1px solid hsla(0, 0%, 100%, 0.3);
+
+  /* Typography */
+  --font-display: 'SemiSqueezed', 'Syne', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: 'Graphik', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'PPNeueMontrealMono', 'JetBrains Mono', 'GeistMono', monospace;
 }
