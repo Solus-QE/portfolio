@@ -2,361 +2,119 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Alexander Jameson | Machine Learning Researcher &amp; Systems Developer</title>
-  <meta name="description" content="Portfolio of Alexander Jameson: High school researcher specializing in mechanistic interpretability, sparse autoencoders, topological representations, and aerodynamics.">
-
-  <!-- Google Fonts: Syne, Inter & JetBrains Mono -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Stylesheets with Cache-Buster -->
-  <link rel="stylesheet" href="css/variables.css?v=4.0.0">
-  <link rel="stylesheet" href="css/reset.css?v=4.0.0">
-  <link rel="stylesheet" href="css/typography.css?v=4.0.0">
-  <link rel="stylesheet" href="css/layout.css?v=4.0.0">
-  <link rel="stylesheet" href="css/components.css?v=4.0.0">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/IosevkaTermNF-Regular.woff2">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1c2225">
+  <title>Alexander Jameson ~ studio</title>
+  <meta name="description" content="Founder &amp; Lead Researcher at Phanguard. Mechanistic interpretability &amp; ML safety research, FAA student pilot, and systems developer.">
+  <link rel="stylesheet" href="css/style.css?v=9.9.3">
 </head>
-<body class="home">
+<body class="is-home">
+  <a href="#main-content" class="skip-link">Skip to content</a>
 
-  <div class="wrapper">
-    <!-- Background GPU Topological Wave Canvas -->
-    <canvas class="bg-canvas" id="bg-canvas"></canvas>
+  <!-- Sidebar (digitalmeadow.studio style) -->
+  <site-sidebar>
+    <button data-menu-toggle type="button" class="button" aria-expanded="false">
+      <span class="button-inner">Menu <toggle-indicator aria-hidden="true"></toggle-indicator></span>
+    </button>
+    <aside class="sidebar">
+      <a href="#home" class="cwd" id="cwd-home" aria-label="Studio Home">􀀀 Documents/studio/alexander-jameson</a>
+      <nav class="tree">
+        <nav-tree>
+          <ul class="nav-inner" role="tree" aria-label="Site navigation">
+            <li role="none">
+              <tree-folder role="none" label="about" style="--nav-icon: ''">
+                <button type="button" data-summary role="treeitem" aria-expanded="false" class="depth-0">about</button>
+                <ul id="nav-group-about" role="group">
+                  <li role="none"><a href="#about/README.md" class="nav-item nav-item--page depth-1" role="treeitem" style="--nav-icon: '󰈙'">README.md</a></li>
+                  <li role="none"><a href="#about/resume.txt" class="nav-item nav-item--page depth-1" role="treeitem" style="--nav-icon: '󰈙'">resume.txt</a></li>
+                </ul>
+              </tree-folder>
+            </li>
+            <li role="none">
+              <tree-folder role="none" label="research" style="--nav-icon: ''">
+                <button type="button" data-summary role="treeitem" aria-expanded="false" class="depth-0">research</button>
+                <ul id="nav-group-research" role="group">
+                  <li role="none"><a href="#research/phanguard_sae.md" class="nav-item nav-item--page depth-1" role="treeitem" style="--nav-icon: '󰈙'">phanguard_sae.md</a></li>
+                  <li role="none"><a href="#research/every_eval_ever.md" class="nav-item nav-item--page depth-1" role="treeitem" style="--nav-icon: '󰈙'">every_eval_ever.md</a></li>
+                  <li role="none"><a href="#research/eeg_parkinsons_miccai.md" class="nav-item nav-item--page depth-1" role="treeitem" style="--nav-icon: '󰈙'">eeg_parkinsons_miccai.md</a></li>
+                  <li role="none"><a href="#research/reward_informed_sae_nemi.md" class="nav-item nav-item--page depth-1" role="treeitem" style="--nav-icon: '󰈙'">reward_informed_sae_nemi.md</a></li>
+                  <li role="none"><a href="#research/peer_review_acl_colm.md" class="nav-item nav-item--page depth-1" role="treeitem" style="--nav-icon: '󰈙'">peer_review_acl_colm.md</a></li>
+                </ul>
+              </tree-folder>
+            </li>
+            <li role="none">
+              <tree-folder role="none" label="projects" style="--nav-icon: ''">
+                <button type="button" data-summary role="treeitem" aria-expanded="false" class="depth-0">projects</button>
+                <ul id="nav-group-projects" role="group">
+                  <li role="none"><a href="#projects/SomaOS.c" class="nav-item nav-item--page depth-1" role="treeitem" style="--nav-icon: '󰈙'">SomaOS.c</a></li>
+                  <li role="none"><a href="#projects/apex_sram_seu.py" class="nav-item nav-item--page depth-1" role="treeitem" style="--nav-icon: '󰈙'">apex_sram_seu.py</a></li>
+                  <li role="none"><a href="#projects/aerodynamics_graphics.c" class="nav-item nav-item--page depth-1" role="treeitem" style="--nav-icon: '󰈙'">aerodynamics_graphics.c</a></li>
+                  <li role="none"><a href="#projects/MathDiff.lean" class="nav-item nav-item--page depth-1" role="treeitem" style="--nav-icon: '󰈙'">MathDiff.lean</a></li>
+                  <li role="none"><a href="#projects/lirover_slam.cpp" class="nav-item nav-item--page depth-1" role="treeitem" style="--nav-icon: '󰈙'">lirover_slam.cpp</a></li>
+                  <li role="none"><a href="#projects/soir_moe.c" class="nav-item nav-item--page depth-1" role="treeitem" style="--nav-icon: '󰈙'">soir_moe.c</a></li>
+                  <li role="none"><a href="#projects/curv.ts" class="nav-item nav-item--page depth-1" role="treeitem" style="--nav-icon: '󰈙'">curv.ts</a></li>
+                  <li role="none"><a href="#projects/weave.luau" class="nav-item nav-item--page depth-1" role="treeitem" style="--nav-icon: '󰈙'">weave.luau</a></li>
+                  <li role="none"><a href="#projects/aperture.gd" class="nav-item nav-item--page depth-1" role="treeitem" style="--nav-icon: '󰈙'">aperture.gd</a></li>
+                  <li role="none"><a href="#projects/mitr_eval.ipynb" class="nav-item nav-item--page depth-1" role="treeitem" style="--nav-icon: '󰈙'">mitr_eval.ipynb</a></li>
+                  <li role="none"><a href="#projects/opensauce_arcade.cpp" class="nav-item nav-item--page depth-1" role="treeitem" style="--nav-icon: '󰈙'">opensauce_arcade.cpp</a></li>
+                </ul>
+              </tree-folder>
+            </li>
+            <li role="none">
+              <tree-folder role="none" label="activities" style="--nav-icon: ''">
+                <button type="button" data-summary role="treeitem" aria-expanded="false" class="depth-0">activities</button>
+                <ul id="nav-group-activities" role="group">
+                  <li role="none"><a href="#activities/planet_hacks.md" class="nav-item nav-item--page depth-1" role="treeitem" style="--nav-icon: '󰈙'">planet_hacks.md</a></li>
+                  <li role="none"><a href="#activities/marching_band_dci.md" class="nav-item nav-item--page depth-1" role="treeitem" style="--nav-icon: '󰈙'">marching_band_dci.md</a></li>
+                  <li role="none"><a href="#activities/hack_club_stardance.md" class="nav-item nav-item--page depth-1" role="treeitem" style="--nav-icon: '󰈙'">hack_club_stardance.md</a></li>
+                  <li role="none"><a href="#activities/flight_training.md" class="nav-item nav-item--page depth-1" role="treeitem" style="--nav-icon: '󰈙'">flight_training.md</a></li>
+                  <li role="none"><a href="#activities/arcsoft_qa.md" class="nav-item nav-item--page depth-1" role="treeitem" style="--nav-icon: '󰈙'">arcsoft_qa.md</a></li>
+                  <li role="none"><a href="#activities/kempersports.md" class="nav-item nav-item--page depth-1" role="treeitem" style="--nav-icon: '󰈙'">kempersports.md</a></li>
+                </ul>
+              </tree-folder>
+            </li>
+            <li role="none"><a href="#about/README.md" class="nav-item nav-item--page depth-0" role="treeitem" style="--nav-icon: '󰈙'">README</a></li>
+            <li class="end" role="none"><button type="button" class="nav-item nav-item--page depth-0" id="sidebar-copy-email" role="treeitem" style="--nav-icon: '󰈙'">contact-us</button></li>
+            <li role="none"><a href="mailto:alex@phanguard.org" target="_blank" rel="noopener noreferrer" class="nav-item nav-item--external depth-0" role="treeitem" style="--nav-icon: '󰧫'">email</a></li>
+            <li role="none"><a href="https://github.com/Solus-QE" target="_blank" rel="noopener noreferrer" class="nav-item nav-item--external depth-0" role="treeitem" style="--nav-icon: ''">github</a></li>
+          </ul>
+        </nav-tree>
+      </nav>
+    </aside>
+    <div data-sidebar-overlay></div>
+  </site-sidebar>
 
-    <!-- Top Sticky Fade Gradient Overlay -->
-    <div class="topOverlay"></div>
-
-    <!-- Film Grain & CRT Scanlines -->
-    <div class="scanlines"></div>
-
-    <!-- 20-Column Interactive Pixel Grid Cursor -->
-    <div class="cursor" id="cursor-grid">
-      <div class="cursor__inner"></div>
-    </div>
-
-    <!-- Horizontal Showcase Skim Cursor -->
-    <div class="homeworks__skimCursor monospace" id="skim-cursor">
-      <span>Hold to skim</span>
-    </div>
-
-    <!-- Top Navigation Header -->
-    <header>
-      <div class="layout cursor_disabled" style="align-items: center;">
-        <div class="layout__third">
-          <a href="#intro" class="logo-text">ALEXANDER JAMESON</a>
-        </div>
-        <div class="layout__second">
-          <nav class="nav">
-            <a href="#intro">Index</a>
-            <a href="#research">Research</a>
-            <a href="#aerodynamics">Aerodynamics</a>
-            <a href="#works">Works</a>
-            <a href="#experience">Experience</a>
-            <a href="#contact">Contact</a>
-            <div class="rec start">
-              <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--green); box-shadow: 0 0 8px #00ff66;"></span>
-              <span>ACTIVE</span>
-            </div>
-          </nav>
-        </div>
-      </div>
-    </header>
-
-    <!-- Chapter 1: Section Nº001 / Intro & 3D Topological Centerpiece -->
-    <section class="section section__grey" id="intro" style="padding-top: 8vw;">
-      <!-- Running Marquee Text Header -->
-      <div class="marqueeText" style="margin-bottom: 3vw;">
-        <div class="marqueeText__track">
-          <div class="marqueeText__title">
-            <span>ALEXANDER JAMESON</span>
-            <span class="marqueeText__symbol">●</span>
-            <span>MECHANISTIC INTERPRETABILITY</span>
-            <span class="marqueeText__symbol">●</span>
-            <span>SPARSE AUTOENCODERS</span>
-            <span class="marqueeText__symbol">●</span>
-            <span>4D TOPOLOGY</span>
-            <span class="marqueeText__symbol">●</span>
-            <span>AERODYNAMICS IN C</span>
-            <span class="marqueeText__symbol">●</span>
-            <span>ALEXANDER JAMESON</span>
-            <span class="marqueeText__symbol">●</span>
-            <span>MECHANISTIC INTERPRETABILITY</span>
-            <span class="marqueeText__symbol">●</span>
-            <span>SPARSE AUTOENCODERS</span>
-            <span class="marqueeText__symbol">●</span>
-            <span>4D TOPOLOGY</span>
-            <span class="marqueeText__symbol">●</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Centerpiece 3D WebGL Sculpture -->
-      <div class="logo3d logo3d--hero" id="hero-3d-sculpture"></div>
-
-      <div class="layout">
-        <!-- Left Column: Telemetry & Index -->
-        <div class="layout__third monospace">
-          <div>Nº001 / INTRO</div>
-          <div style="margin-top: 2vw; line-height: 1.8; color: var(--grey);">
-            Adlai E. Stevenson HS '27<br>
-            GPA 4.43 (Honor Roll)<br>
-            Greater Chicago Area<br>
-            FAA Student Pilot<br>
-            Raiders Drum Corps
-          </div>
-        </div>
-
-        <!-- Right Column: Narrative & Links -->
-        <div class="layout__second" style="margin-top: 18vw;">
-          <p class="lead lead__indent">
-            I conduct empirical research in mechanistic interpretability and sparse autoencoders (SAEs), decomposing neural representations into monosemantic feature dictionaries and topological manifold trajectories.
-          </p>
-
-          <p class="lead" style="font-size: clamp(16px, 1.6vw, 24px); line-height: 1.5; color: var(--grey);">
-            Beyond deep learning, I study aerodynamics as an FAA Student Pilot (Private Pilot expected Summer 2026), perform as a trumpet section leader in the Raiders Drum &amp; Bugle Corps, and direct student hackathons.
-          </p>
-
-          <!-- Minimal Sculpture Switchers -->
-          <div class="sculpture-controls">
-            <button class="sculpture-btn active" data-mode="hopf">Hopf Fibration (S³ → S²)</button>
-            <button class="sculpture-btn" data-mode="clifford">Clifford Torus</button>
-            <button class="sculpture-btn" data-mode="lorenz">Lorenz Attractor</button>
-            <button class="sculpture-btn" data-mode="sae">SAE Manifold</button>
-          </div>
-
-          <!-- PX PUSH Split Action Buttons -->
-          <div class="buttons">
-            <a href="#research" class="button button__big">
-              <span>Explore Research &amp; Publications</span>
-              <span class="arrow">↗</span>
-            </a>
-            <a href="#works" class="button button__half">
-              <span>Featured Works</span>
-              <span class="arrow">↗</span>
-            </a>
-            <a href="#contact" class="button button__half">
-              <span>Contact &amp; Connect</span>
-              <span class="arrow">↗</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Chapter 2: Section Nº002 / Research Manuscripts & Living Equations -->
-    <section class="section section__lightgrey" id="research">
-      <div class="layout">
-        <div class="layout__third monospace">
-          <div>Nº002 / RESEARCH</div>
-          <div style="margin-top: 2vw; line-height: 1.8; color: var(--black);">
-            Dictionary Learning<br>
-            Adversarial ML<br>
-            Transformer Geometry<br>
-            ACL 2026 Reviewer
-          </div>
-        </div>
-
-        <div class="layout__second">
-          <h2 style="margin-bottom: 2vw; color: var(--black);">Research &amp; Publications</h2>
-          <p class="lead lead__indent" style="color: var(--black); margin-bottom: 2.5vw;">
-            Empirical work isolating deceptive reasoning sub-circuits, analyzing high-dimensional latent space manifolds, and benchmarking model evaluation scorecards.
-          </p>
-
-          <!-- Interactive WebGL 3D SAE Latent Feature Polytope -->
-          <div class="webgl-card-panel light">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-              <span class="monospace" style="color: var(--black);">3D SAE Latent Space Steerability</span>
-              <span class="monospace" id="sae-steer-val" style="color: var(--black);">Δz = 0%</span>
-            </div>
-            <div class="webgl-canvas-box" id="sae-canvas"></div>
-            <div style="display: flex; align-items: center; gap: 14px;">
-              <span class="monospace" style="font-size: 11px; color: var(--black);">Feature Perturbation (α):</span>
-              <input type="range" id="sae-slider" min="-100" max="100" step="1" value="0" style="flex: 1; accent-color: #111; cursor: pointer;">
-            </div>
-          </div>
-
-          <!-- Inverted Accordion for Research -->
-          <ul class="accordion" id="research-accordion" style="--color: var(--black); --primarycolor: var(--black);"></ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Chapter 3: Section Nº003 / Aerodynamics & Low-Level Systems -->
-    <section class="section section__blue" id="aerodynamics">
-      <div class="layout">
-        <div class="layout__third monospace">
-          <div>Nº003 / AERODYNAMICS</div>
-          <div style="margin-top: 2vw; line-height: 1.8; color: var(--grey);">
-            FAA Student Pilot<br>
-            Navier-Stokes CFD<br>
-            NACA 0012 Airfoil<br>
-            C &amp; OpenGL Shaders
-          </div>
-        </div>
-
-        <div class="layout__second">
-          <h2 style="margin-bottom: 2vw; color: var(--grey);">Aviation &amp; Computational Aerodynamics</h2>
-          <p class="lead lead__indent" style="color: var(--grey); margin-bottom: 2.5vw;">
-            Integrating physical flight training towards the FAA Private Pilot Certificate with low-level computational fluid dynamics engines written in C and OpenGL shaders.
-          </p>
-
-          <!-- Interactive 3D WebGL Aerodynamic Wind Tunnel Canvas -->
-          <div class="webgl-card-panel">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-              <span class="monospace" style="color: var(--lightblue);">3D GPU Fluid Simulation · NACA 0012</span>
-              <span class="monospace" id="aero-alpha-val" style="color: var(--accent-amber, #f59e0b);">α = +6°</span>
-            </div>
-            <div class="webgl-canvas-box" id="aero-canvas"></div>
-            <div style="display: flex; align-items: center; gap: 14px;">
-              <span class="monospace" style="font-size: 11px; color: var(--grey);">Angle of Attack:</span>
-              <input type="range" id="aero-slider" min="-12" max="24" step="1" value="6" style="flex: 1; accent-color: #9fe4f3; cursor: pointer;">
-            </div>
-          </div>
-
-          <div class="research-math-block" style="background: rgba(0, 0, 0, 0.45); border-color: rgba(255, 255, 255, 0.2);">
-            <span class="research-math-formula" style="color: var(--lightblue);">
-              ρ(∂u/∂t + u · ∇u) = -∇p + μ∇²u + f
-            </span>
-            <p class="monospace__p" style="color: var(--grey); margin-bottom: 12px;">
-              Solving incompressible Navier-Stokes momentum equations to model boundary layer separation, stall vortex dynamics, and vortex-induced drag over cambered airfoils in real-time GPU simulations.
+  <!-- Main Content Workspace -->
+  <main id="main-content">
+    <div class="content-wrapper disable-max-width">
+      <div class="content-page">
+        <div class="content-row">
+          <div class="line-numbers" aria-hidden="true"></div>
+          <div class="content-lines disable-max-width">
+            <p id="center-spacers">&nbsp;</p>
+            <h1 data-text-wave="skip">Alexander Jameson</h1>
+            <h2 data-text-wave="skip">founder @ phanguard · ML safety researcher &amp; student pilot</h2>
+            <p class="cta-spacer" aria-hidden="true">&nbsp;</p>
+            <p class="cta-row">
+              <span class="cta-align">
+                <a href="#about/README.md" style="--link-color:var(--color-green)" class="button">
+                  <span class="button-inner">
+                    <span class="button-icon" aria-hidden="true">󰈙</span>
+                    Explore
+                  </span>
+                </a>
+              </span>
             </p>
-            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
-              <span class="tag-badge">Navier-Stokes</span>
-              <span class="tag-badge">C Graphics</span>
-              <span class="tag-badge">GLSL Shaders</span>
-              <span class="tag-badge">FAA Flight Training</span>
-            </div>
-            <a href="https://github.com/Solus-QE/aerodynamics_graphics" target="_blank" class="button button__big" style="border-color: rgba(255, 255, 255, 0.3); font-size: 11px;">
-              <span>View Aerodynamics C Engine Repository</span>
-              <span class="arrow">↗</span>
-            </a>
           </div>
+        </div>
+        <div class="ascii-container">
+          <div class="ascii-renderer"></div>
         </div>
       </div>
-    </section>
+    </div>
+  </main>
 
-    <!-- Chapter 4: Section Nº004 / Featured Works Showcase Track -->
-    <section class="section section__black" id="works">
-      <div class="layout">
-        <div class="layout__third monospace">
-          <div>Nº004 / WORKS</div>
-          <div style="margin-top: 2vw; line-height: 1.8; color: var(--grey);">
-            PyTorch Pipelines<br>
-            Autonomous Agents<br>
-            Game Physics<br>
-            Security Classifiers
-          </div>
-        </div>
-
-        <div class="layout__second">
-          <h2 style="margin-bottom: 2vw; color: var(--grey);">Featured Works</h2>
-          <p class="lead" style="color: var(--grey); font-size: clamp(16px, 1.8vw, 26px);">
-            Open-source mechanistic interpretability repositories, autonomous agents, and systems engines.
-          </p>
-
-          <!-- Horizontal Running Showcase Carousel -->
-          <div class="homeworks__showcaseHold">
-            <div class="homeworks__showcase" id="works-showcase">
-              <div class="homeworks__showcaseLoop" id="showcase-loop"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Chapter 5: Section Nº005 / Experience, Music & Aviation Leadership -->
-    <section class="section section__cream" id="experience">
-      <div class="layout">
-        <div class="layout__third monospace">
-          <div>Nº005 / EXPERIENCE</div>
-          <div style="margin-top: 2vw; line-height: 1.8; color: #000;">
-            Raiders Drum Corps<br>
-            Aviation Training<br>
-            ARCSOFT QA Testing<br>
-            Planet Hacks Director<br>
-            Kemper Sports
-          </div>
-        </div>
-
-        <div class="layout__second">
-          <h2 style="margin-bottom: 2vw; color: #000;">Experience &amp; Leadership</h2>
-          <p class="lead lead__indent" style="color: #000; margin-bottom: 2.5vw;">
-            Touring brass ensemble leadership, aviation flight hours, software quality engineering, and national hackathon organization.
-          </p>
-
-          <!-- Interactive 3D WebGL Brass Harmonic Resonator -->
-          <div class="webgl-card-panel light">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-              <span class="monospace" style="color: #000;">3D Fourier Brass Harmonic Resonator</span>
-              <span class="monospace" style="color: #000;">Raiders Trumpet Section</span>
-            </div>
-            <div class="webgl-canvas-box" id="brass-canvas" style="height: 180px;"></div>
-          </div>
-
-          <!-- Inverted Accordion for Experience -->
-          <ul class="accordion" id="experience-accordion" style="--color: #000; --primarycolor: #000;"></ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Chapter 6: Section Nº006 / Contact & Footer Matrix -->
-    <section class="section section__grey" id="contact" style="padding-bottom: 6vw;">
-      <div class="layout" style="border-bottom: 1px solid rgba(255, 255, 255, 0.2); padding-bottom: 3vw; margin-bottom: 4vw;">
-        <h1 style="font-size: clamp(32px, 8vw, 120px); letter-spacing: -0.04em; width: 100%;">
-          ALEXANDER JAMESON
-        </h1>
-      </div>
-
-      <div class="layout">
-        <div class="layout__third monospace">
-          <div>Nº006 / CONNECT</div>
-          <div style="margin-top: 2vw; line-height: 1.8; color: var(--grey);">
-            Greater Chicago Area<br>
-            United States<br><br>
-            solus.quant.exps@gmail.com
-          </div>
-        </div>
-
-        <div class="layout__second">
-          <div class="buttons" style="margin-top: 0;">
-            <a href="mailto:solus.quant.exps@gmail.com" class="button button__half" id="copy-email-btn">
-              <span>Copy Email Address</span>
-              <span class="arrow">↗</span>
-            </a>
-            <a href="https://github.com/Solus-QE" target="_blank" class="button button__half">
-              <span>GitHub Profile</span>
-              <span class="arrow">↗</span>
-            </a>
-            <a href="mailto:solus.quant.exps@gmail.com" class="button button__big">
-              <span>Send Research Inquiry (solus.quant.exps@gmail.com)</span>
-              <span class="arrow">↗</span>
-            </a>
-          </div>
-
-          <div class="monospace" style="margin-top: 4vw; color: var(--grey); font-size: 11px;">
-            Alexander Jameson &copy; 2026 · Adlai E. Stevenson High School · All rights reserved
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <!-- Toast Notification Feedback -->
-  <div class="toast" id="toast">Notification</div>
-
-  <!-- Three.js CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
-  <!-- Lenis Smooth Scrolling CDN -->
-  <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
-
-  <!-- GSAP & ScrollTrigger CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
-  <!-- Application Scripts with Cache-Buster -->
-  <script src="js/three-scene.js?v=4.0.0"></script>
-  <script src="js/app.js?v=4.0.0"></script>
+  <script src="js/digital-meadow.js?v=9.9.3"></script>
 </body>
 </html>
