@@ -1303,11 +1303,11 @@
         return `
 <h1>Alexander Jameson</h1>
 <p style="color: var(--color-green); margin-bottom: 1rem;">
-  ~ founder @ phanguard · ML safety researcher &amp; student pilot
+  ~ founder @ cesure · ML safety researcher &amp; student pilot
 </p>
 
 <p>
-  I am an independent ML safety researcher and the Founder &amp; Lead Researcher at <strong>Phanguard</strong>, a fiscally sponsored 501(c)(3) nonprofit research lab advancing empirical AI safety through mechanistic interpretability, sparse autoencoders (SAEs), and latent space steerability.
+  I am an independent ML safety researcher and the Founder &amp; Lead Researcher at <strong>Cesure</strong>, a fiscally sponsored 501(c)(3) nonprofit research lab advancing empirical AI safety through mechanistic interpretability, sparse autoencoders (SAEs), and latent space steerability.
 </p>
 
 <p>
@@ -1318,7 +1318,7 @@
   <a href="#projects/SomaOS.c" class="button" style="--link-color: var(--color-green); margin-right: 1ch;">
     <span class="button-inner"><span class="button-icon" aria-hidden="true">󰈙</span>explore-projects</span>
   </a>
-  <a href="#research/phanguard_sae.md" class="button" style="--link-color: var(--color-yellow); margin-right: 1ch;">
+  <a href="#research/cesure_sae.md" class="button" style="--link-color: var(--color-yellow); margin-right: 1ch;">
     <span class="button-inner"><span class="button-icon" aria-hidden="true">󰈙</span>view-research</span>
   </a>
   <a href="#about/resume.txt" class="button" style="--link-color: var(--color-blue); margin-right: 1ch;">
@@ -1352,7 +1352,7 @@
         return `
 <pre class="astro-code"><code>================================================================================
 ALEXANDER JAMESON
-alex@phanguard.org | https://github.com/Solus-QE
+alex@cesure.xyz | https://github.com/Solus-QE
 Greater Chicago Area
 ================================================================================
 
@@ -1361,7 +1361,7 @@ Greater Chicago Area
   AP Physics C, AP Chemistry, AP Statistics, Discrete Math, Differential Equations
 
 [EXPERIENCE & RESEARCH]
-* Founder & Lead Researcher | Phanguard (Dec 2024 – Present)
+* Founder & Lead Researcher | Cesure (Dec 2024 – Present)
   - Direct an independent research lab advancing empirical AI safety through
     mechanistic interpretability and sparse autoencoders (SAEs).
   - Lead an 8-person team investigating failure modes in frontier reasoning
@@ -1456,15 +1456,15 @@ Greater Chicago Area
     // ------------------------------------------------------------------------
     // RESEARCH
     // ------------------------------------------------------------------------
-    'research/phanguard_sae.md': {
-      title: 'phanguard_sae.md',
+    'research/cesure_sae.md': {
+      title: 'cesure_sae.md',
       folder: 'research',
       render: function() {
         return `
-<h2>Phanguard: Mechanistic Interpretability &amp; Sparse Autoencoders</h2>
+<h2>Cesure: Mechanistic Interpretability &amp; Sparse Autoencoders</h2>
 <p>
-  <strong>Lead Researcher</strong> · Phanguard AI Safety Lab (2025 – Present)<br>
-  Live Research Tool: <a href="https://gaslight.phanguard.org" target="_blank" rel="noopener noreferrer">https://gaslight.phanguard.org ↗</a><br>
+  <strong>Lead Researcher</strong> · Cesure AI Safety Lab (2025 – Present)<br>
+  Live Research Tool: <a href="https://gaslight.cesure.xyz" target="_blank" rel="noopener noreferrer">https://gaslight.cesure.xyz ↗</a><br>
   Repository: <a href="https://github.com/Solus-QE/GaslightingAI" target="_blank" rel="noopener noreferrer">https://github.com/Solus-QE/GaslightingAI ↗</a>
 </p>
 
@@ -2328,7 +2328,7 @@ LAUNCH_CONFIG = {
       asciiEngine = initNavierStokesRainEngine(asciiRendererEl, {
         headings: [
           { text: 'Alexander Jameson', color: 'var(--color-text)' },
-          { text: 'founder @ phanguard · ML safety researcher & student pilot', color: 'var(--color-subtext0)' }
+          { text: 'founder @ cesure · ML safety researcher & student pilot', color: 'var(--color-subtext0)' }
         ]
       });
     }
@@ -2343,7 +2343,7 @@ LAUNCH_CONFIG = {
         contentLinesEl.innerHTML = `
 <p id="center-spacers">&nbsp;</p>
 <h1 data-text-wave="skip">Alexander Jameson</h1>
-<h2 data-text-wave="skip">founder @ phanguard · ML safety researcher &amp; student pilot</h2>
+<h2 data-text-wave="skip">founder @ cesure · ML safety researcher &amp; student pilot</h2>
 <p class="cta-spacer" aria-hidden="true">&nbsp;</p>
 <p class="cta-row">
   <span class="cta-align">
@@ -2426,7 +2426,7 @@ LAUNCH_CONFIG = {
       const copyBtn = e.target.closest('#sidebar-copy-email') || e.target.closest('#doc-copy-email');
       if (copyBtn) {
         e.preventDefault();
-        const email = 'alex@phanguard.org';
+        const email = 'alex@cesure.xyz';
         if (navigator.clipboard) {
           navigator.clipboard.writeText(email).then(() => {
             alert(`Copied ${email} to clipboard`);
