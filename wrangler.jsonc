@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "portfolio",
+  "compatibility_date": "2026-06-02",
+  "assets": {
+    "directory": "."
+  },
+  "routes": [
+    { "pattern": "portfolio.cesure.xyz", "custom_domain": true }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}
