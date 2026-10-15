@@ -1393,12 +1393,6 @@ Greater Chicago Area
   - Invited reviewer for peer-reviewed submissions on mechanistic interpretability,
     representation engineering, and LLM safety.
 
-* Lead Organizer | Planet Hacks (Jan 2025 – Present)
-  - Founded and directed Chicagoland's premier sustainability hackathon;
-    raised $18,000+ in corporate sponsor funding.
-  - Hosted 200+ students from 30+ schools with workshops in hardware, AI,
-    and environmental technology.
-
 * Lead Organizer | Hack Club Stardance (Jul 2025)
   - Co-organized 4-day hacker gathering in Lake Tahoe, CA for 40 top teenage
     engineers; managed logistics, budgets, and hardware workshops.
@@ -2168,28 +2162,6 @@ LAUNCH_CONFIG = {
     // ------------------------------------------------------------------------
     // ACTIVITIES
     // ------------------------------------------------------------------------
-    'activities/planet_hacks.md': {
-      title: 'planet_hacks.md',
-      folder: 'activities',
-      render: function() {
-        return `
-<h2>Planet Hacks: Chicagoland Sustainability Hackathon</h2>
-<p>
-  <strong>Founder &amp; Lead Director</strong> · Jan 2025 – Present<br>
-  Fiscal Sponsor: Hack Club 501(c)(3)
-</p>
-
-<p>
-  Founded and directed the premier sustainability hackathon in the Greater Chicago area. Raised <strong>$18,000+</strong> in corporate sponsorships and community grants to host 200+ students from 30+ schools.
-</p>
-<ul>
-  <li>Organized hardware workshops in microcontroller sensor arrays, clean-energy prototypes, and environmental AI.</li>
-  <li>Managed logistics, venue coordination, mentor recruitment, and meal catering.</li>
-</ul>
-`;
-      }
-    },
-
     'activities/hack_club_stardance.md': {
       title: 'hack_club_stardance.md',
       folder: 'activities',
